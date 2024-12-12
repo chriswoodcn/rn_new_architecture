@@ -63,6 +63,17 @@ fun RollerPage(name: String, modifier: Modifier = Modifier) {
         }) {
             Text(text = "跳转react native入口页面")
         }
+
+        Spacer(Modifier.height(8.dp))
+
+        Button(onClick = {
+            // 创建Intent，指向目标Activity
+            val intent = Intent(context, SecondActivity::class.java)
+            // 启动目标Activity
+            context.startActivity(intent)
+        }) {
+            Text(text = "跳转SecondActivity页面")
+        }
     }
 }
 
