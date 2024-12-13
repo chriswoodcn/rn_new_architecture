@@ -5,6 +5,7 @@ const HelloWorld = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.hello}>Hello, World</Text>
+      <Text style={styles.description}>This page is rendered by React Native</Text>
     </View>
   );
 };
@@ -15,6 +16,11 @@ const styles = StyleSheet.create({
   },
   hello: {
     fontSize: 20,
+    textAlign: "center",
+    margin: 10,
+  },
+  description: {
+    fontSize: 16,
     textAlign: "center",
     margin: 10,
   },

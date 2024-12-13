@@ -2,11 +2,10 @@ package cn.chriswood.myapplication
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import cn.chriswood.myapplication.MainActivity.Companion
+import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactPackage
@@ -16,15 +15,12 @@ import com.facebook.react.modules.core.DefaultHardwareBackBtnHandler
 import com.facebook.soloader.SoLoader
 
 class MyReactActivity : Activity(), DefaultHardwareBackBtnHandler {
-    companion object {
-        const val OVERLAY_PERMISSION_REQ_CODE = 1  // Choose any value
-    }
 
     private lateinit var reactRootView: ReactRootView
     private lateinit var reactInstanceManager: ReactInstanceManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SoLoader.init(this, false)
+        SoLoader.init(this, OpenSourceMergedSoMapping)
         reactRootView = ReactRootView(this)
         val packages: List<ReactPackage> = PackageList(application).packages
         // Packages that cannot be autolinked yet can be added manually here, for example:

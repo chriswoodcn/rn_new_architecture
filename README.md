@@ -7,12 +7,13 @@
 ```text
 # js
 node 20.18.1
-react-native 0.75.4
+react-native 0.76.4
 react 18.3.1
 
 # android
+agp 8.6.0
 gradle 8.7.0
-kotlin 1.9.0
+kotlin 1.9.24
 
 # ios 待更新
 ```
