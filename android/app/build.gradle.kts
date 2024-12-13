@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    ndkVersion = project.properties["ndkVersion"] as String
     namespace = "cn.chriswood.myapplication"
     compileSdk = 35
 

@@ -1,9 +1,15 @@
+import org.jetbrains.kotlin.gradle.plugin.extraProperties
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
 }
 buildscript {
+
+    val buildToolsVersion by extra("35.0.0")
+    val ndkVersion by extra("26.1.10909125")
+
     repositories {
         maven("https://maven.aliyun.com/repository/public")
         maven("https://maven.aliyun.com/repository/central")

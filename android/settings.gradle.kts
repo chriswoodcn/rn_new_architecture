@@ -42,16 +42,12 @@ pluginManagement {
 // Configures the React Native Gradle Settings plugin used for autolinking
 plugins { id("com.facebook.react.settings") }
 extensions.configure<com.facebook.react.ReactSettingsExtension> { autolinkLibrariesFromCommand() }
-//val expoPackageJsonPath = ProcessBuilder("node", "--print", "require.resolve('expo/package.json')")
-//    .directory(rootDir)
-//    .start()
-//    .inputStream.bufferedReader()
-//    .use { it.readText().trim() }
-//println("expoPackageJsonPath $expoPackageJsonPath")
-//apply(from = File(expoPackageJsonPath).resolve("../scripts/autolinking.gradle"))
-//useExpoModules()
+//load expo
+apply(from = "./expo.gradle")
+
 
 rootProject.name = "MyApplication"
 include(":app")
-// Configures the React Native Gradle Plugin
 includeBuild("../node_modules/@react-native/gradle-plugin")
+
+
